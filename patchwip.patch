@@ -106,6 +106,19 @@ index 31ec0fb8aab..c4de37947df 100644
     CHIP_KABINI,
     CHIP_HAWAII,
     CHIP_TONGA, /* GFX8 (Volcanic Islands & Polaris) */
+diff --git a/src/amd/common/amd_family.c b/src/amd/common/amd_family.c
+index 801cce1dbe2..eb041650b72 100644
+--- a/src/amd/common/amd_family.c
++++ b/src/amd/common/amd_family.c
+@@ -41,6 +41,8 @@ const char *ac_get_family_name(enum radeon_family family)
+    case CHIP_HAINAN:
+       return "hainan";
+    case CHIP_BONAIRE:
++   case CHIP_LIVERPOOL:
++   case CHIP_GLADIUS:
+       return "bonaire";
+    case CHIP_KABINI:
+       return "kabini";
 diff --git a/src/amd/llvm/ac_llvm_util.c b/src/amd/llvm/ac_llvm_util.c
 index b820a5577a3..fc8b249e580 100644
 --- a/src/amd/llvm/ac_llvm_util.c
